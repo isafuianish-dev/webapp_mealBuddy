@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meal Buddy</title>
+<link rel="icon" type="image/png" href="media/favicon.png">
+<link rel="stylesheet" href="https://isafuianish-dev.github.io/webapp_cdnBuddy/css/tokens.css">
+<link rel="stylesheet" href="https://isafuianish-dev.github.io/webapp_cdnBuddy/css/base.css">
+<link rel="stylesheet" href="style.css">
+<script src="https://isafuianish-dev.github.io/webapp_cdnBuddy/js/theme-init.js" data-app="webapp_mealBuddy"></script>
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div class="topbar-brand">
+      <span class="brand-icon" aria-hidden="true"><span class="icon" style="-webkit-mask-image:url(media/icon.svg);mask-image:url(media/icon.svg);"></span></span>
+      <h1>Meal Buddy</h1>
+    </div>
+    <div class="topbar-actions">
+      <button id="btnPrint" class="btn btn-ghost btn-icon" title="Print / export the week as PDF" aria-label="Print week"></button>
+      <button id="btnExportData" class="btn btn-ghost btn-icon" title="Export the plan as a JSON backup" aria-label="Export data"></button>
+      <label class="btn btn-ghost btn-icon file-btn" title="Import a JSON backup" aria-label="Import data">
+        <span class="file-btn-icon" id="fileBtnIcon"></span>
+        <input type="file" id="fileImportData" accept="application/json">
+      </label>
+      <button id="btnSettings" class="btn btn-ghost btn-icon" title="Settings" aria-label="Settings"></button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="panel panel-days">
+      <div class="panel-header">
+        <div class="panel-header-title">
+          <span class="panel-header-icon" id="panelHeaderIcon"></span>
+          <span>Week</span>
+        </div>
+        <p class="panel-header-sub">Breakfast, lunch &amp; dinner &mdash; one plan per person</p>
+      </div>
+      <ul id="dayList" class="day-list"></ul>
+    </aside>
+
+    <main class="panel panel-detail" id="dayDetail">
+      <section class="day-header">
+        <div class="day-header-title-wrap">
+          <h2 class="day-header-title" id="dayTitle">Monday</h2>
+          <span class="day-header-tag" id="dayTag" hidden>Today</span>
+        </div>
+        <div class="day-header-actions">
+          <button type="button" id="btnCopyDay" class="btn btn-ghost btn-sm">Copy to&hellip;</button>
+          <button type="button" id="btnClearDay" class="btn btn-danger btn-sm">Clear day</button>
+        </div>
+      </section>
+
+      <div id="mealSections"></div>
+    </main>
+  </div>
+</div>
+
+<div id="printArea" class="print-area"></div>
+
+<script src="https://isafuianish-dev.github.io/webapp_cdnBuddy/js/utils.js"></script>
+<script src="https://isafuianish-dev.github.io/webapp_cdnBuddy/js/icons.js"></script>
+<script src="https://isafuianish-dev.github.io/webapp_cdnBuddy/js/modal.js"></script>
+<script src="https://isafuianish-dev.github.io/webapp_cdnBuddy/js/theme.js"></script>
+<script src="https://isafuianish-dev.github.io/webapp_cdnBuddy/js/settings.js"></script>
+<script src="https://isafuianish-dev.github.io/webapp_cdnBuddy/js/markdown.js"></script>
+<script src="https://isafuianish-dev.github.io/webapp_cdnBuddy/js/manual.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
